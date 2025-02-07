@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f2f5fa; /* fix: mac os scroll bg */
+}
+
+html.dark {
+  body {
+    background: #000; /* fix: mac os scroll bg */
+  }
+}
