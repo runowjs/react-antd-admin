@@ -3,8 +3,8 @@ import { useAuth } from '@/proviers/auth';
 import { Avatar, Button, Dropdown, Flex, Typography } from 'antd';
 import { ThemeProvider } from 'antd-style';
 import {
-  BellIcon,
   ChevronDownIcon,
+  GithubIcon,
   LogOutIcon,
   ShieldIcon,
   UserIcon,
@@ -23,7 +23,12 @@ const Header: React.FC = () => {
       </ThemeProvider>
       <Flex align="center" gap={8}>
         <ThemeProvider themeMode="dark">
-          <Button type="text" icon={<BellIcon size={18} />} />
+          <Button
+            target="_blank"
+            href="https://github.com/runowjs/react-antd-admin"
+            type="text"
+            icon={<GithubIcon size={18} />}
+          />
           <ThemeSwitcher />
         </ThemeProvider>
         <Dropdown
