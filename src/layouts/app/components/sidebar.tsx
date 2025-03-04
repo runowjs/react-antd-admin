@@ -99,18 +99,21 @@ const Sidebar: React.FC = () => {
         items={menus}
         selectable={false}
         _internalRenderMenuItem={(dom, props) => {
-          const { elementRef, className, ...reset } = dom.props;
+          const { title, attribute, className, elementRef, ...restProps } =
+            dom.props;
           return (
             <NavLink
               to={props.path}
-              ref={elementRef}
+              {...attribute}
               viewTransition
               className={({ isActive }) =>
                 classNames(className, {
                   [`${prefixCls}-menu-item-selected`]: isActive,
                 })
               }
-              {...reset}
+              title={typeof title === 'string' ? title : undefined}
+              {...restProps}
+              ref={elementRef}
             />
           );
         }}
