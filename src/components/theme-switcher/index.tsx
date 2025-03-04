@@ -41,7 +41,7 @@ const ThemeSwitcher: React.FC = () => {
       const animation = document.documentElement.animate(
         { clipPath: isDark ? clipPath.reverse() : clipPath },
         {
-          duration: 500,
+          duration: 300,
           easing: 'ease-in',
           pseudoElement: `::view-transition-${isDark ? 'old' : 'new'}(root)`,
         },
